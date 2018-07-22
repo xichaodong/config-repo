@@ -1,0 +1,34 @@
+env: 111
+
+spring:
+  application:
+    name: order
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 951211leo
+    url: jdbc:mysql://localhost:3306/SpringCloud_Sell?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true
+  jpa:
+    show-sql: true
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: raw-sensor-data
+        output:
+          destination: raw-sensor-data
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  redis:
+    host: localhost
+    port: 6379
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+server:
+  port: 8085
