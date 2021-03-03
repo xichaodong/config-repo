@@ -10,7 +10,7 @@ spring:
   datasource: # 数据源的相关配置
     url: jdbc:mysql://localhost:3306/chloe?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true
     username: root
-    password: 123abcABC
+    password: '{cipher}c7a69649befc17d9d665d282ad12f5af02a917c174e559376956ca65685cfb5b'
   redis:
     host: 127.0.0.1
     port: 6379
